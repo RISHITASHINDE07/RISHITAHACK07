@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 222 30% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 30% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 30% 14%;
+    --primary: 222 47% 18%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 24% 95%;
+    --secondary-foreground: 222 30% 20%;
+    --muted: 212 22% 94%;
+    --muted-foreground: 222 12% 42%;
+    --accent: 173 58% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 20% 87%;
+    --input: 214 20% 87%;
+    --ring: 173 58% 38%;
+    --chart-1: 222 47% 30%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 38 80% 50%;
+    --chart-4: 280 55% 55%;
+    --chart-5: 142 55% 40%;
+    --radius: 0.625rem;
+    --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 222 47% 14%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 173 58% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 40% 22%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 222 35% 24%;
+    --sidebar-ring: 173 58% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .navy-gradient {
+    background-image: linear-gradient(135deg, hsl(222 50% 14%) 0%, hsl(224 48% 20%) 55%, hsl(212 45% 26%) 100%);
+  }
+  .teal-glow {
+    box-shadow: 0 0 0 1px hsl(173 58% 38% / 0.25), 0 18px 40px -12px hsl(173 58% 38% / 0.35);
+  }
+  .card-shadow {
+    box-shadow: 0 1px 2px hsl(222 30% 14% / 0.04), 0 8px 24px -10px hsl(222 30% 14% / 0.10);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
